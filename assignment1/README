@@ -1,0 +1,11 @@
+README
+
+	This is the assignment 1 for CS265, finished by YONGCHANG CAI.
+	There are 4 files prob1, prob2, prob3, prob4. Which answersing all 4
+problems 
+	Each files should be run under Bash, and modified the ARCHIVE varaible to
+the expected path. 
+	For prob3 the arugments should be looks like: prob3 yyyy mm dd
+	Please think clearfully before you run these file in a large ARCHIVE. It
+will take long time with a large archive.
+	With any problem and question feel to contact: yc552@drexel.edu

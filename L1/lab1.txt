@@ -1,0 +1,61 @@
+Q1:
+~/.bashrc is the place to put stuff that applies only to bash itself, such
+as alias and function definitions, shell options, and prompt settings. 
+~/.bash_profile can be used instead of ~/.profile, but it is read by bash
+only, not by any other shell. This is a logical place to include ~/.bashrc if the shell is interactive. 
+Q2:
+See file "vi_lab"
+Q3:
+-rw-r--r-- 1 yc552 yc552 8059 Sep 23 16:32 funny
+-rwxr-xr-x 1 yc552 yc552  240 Sep 23 16:33 hello.bash
+-rw-rw-r-- 1 yc552 yc552    0 Sep 21 19:32 vi_lab
+Q4:
+-rw-r--r-- Users have read and excute. Group and Others have read. 
+Q5:
+-rwxrw-rw- Users have read, write and excute. Group and Others have read and
+write.
+Q6:
+Yes, because the permissions for User has been changed to read and write.
+Q7:
+Yes, because the permissions for User has been changed to read and write.
+Q8:
+No, because User dont have the permission of excute
+Q9:
+chmod u+x hello.bash
+chmod 744 hello.bash
+Q10:
+Warnning shows that this file cant be edit
+Q11:
+"ls *": annoy  annoy.cc  funny  hello.bash  itemList itemList-2cols  lab1.txt  TelecomTruths  TEST  UnitTestingPhase  vi_lab
+"ls a*": annoy  annoy.cc
+"ls *m*": temList  itemList-2cols  TelecomTruths
+"ls anno?": annoy 
+"ls annoy?": ls: cannot access 'annoy?': No such file or directory
+Q12: 
+It cant be create and a warnning shows that only one name would be allow
+Q13:
+-bash: b?: No such file or directory
+Is a < b?
+$USER is yc552
+\$USER is $USER
+Today is Sun Sep 25 01:35:58 EDT 2016
+Today is Sun Sep 25 01:36:22 EDT 2016
+Today is `date`
+Files that start w/e:
+
+Q14:
+"sort itemList-2cols" is sorting the file based on the value of the first
+character
+"sort -n itemList-2cols" is sorting numerically or based on the value of the
+number. 
+Q15:
+sort -r -n itemList-2cols | head -8
+Q16:
+It becomes the file called "lab1.tar.gz"
+Q17:
+It has been deleted and changed to tar file. 
+Q18:
+grep -r 'Vacation' .
+Q19:
+find $HOME -name "lab1*"
+

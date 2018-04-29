@@ -1,0 +1,10 @@
+This program is to use for assignment 4. Make sure you have a4.java,
+account.java, java.mak, and accounts all 4 files. In order to run the
+program in a properate way, please set the log filename to enviroment
+variable $ACCT_LIST and set the path of bash script accounts to the PATH
+variable. 
+
+run the program just simply type: account -i
+-h, -t, -?
+If there is any problem with the program, please feel free contact
+yc552@drexel.edu.

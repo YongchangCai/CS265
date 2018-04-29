@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project default="run">
+	<description>
+		Compiles all problems, and run the problems. 
+	</description>
+	
+	<target name="compile" depends='prob1,prob2,prob3,prob4'/>
+
+	
+	<target name="clean">
+		<delete>
+			<fileset dir="./">
+				<include name='*.class'/>
+			</fileset>
+		</delete>
+	</target>
+	
+	<target name="prob1">
+		<javac srcdir='.' includes='prob1.java'/>
+		
+	</target>
+	
+	<target name="prob2">
+		<javac srcdir='.' includes='prob2.java'/>
+		
+	</target>
+	
+	<target name="prob3">
+		<javac srcdir='.' includes='prob3.java'/>
+		
+	</target>
+	
+	<target name="prob4">
+		<javac srcdir='.' includes='prob4.java'/>
+		
+	</target>
+	
+	<target name='run' depends='compile'>
+		<java classname='prob1'>
+			<classpath>
+				<pathelement location="."/>
+			</classpath>
+			
+			<arg value="Colin"/>
+		</java>
+		
+		<java classname='prob2'>
+			<classpath>
+				<pathelement location="."/>
+			</classpath>
+			
+			<arg value="42"/>
+		</java>
+		
+		<java classname='prob3'>
+			<classpath>
+				<pathelement location="."/>
+			</classpath>
+			
+			<arg value="1984"/>
+		</java>
+		
+		<java classname='prob4'>
+			<classpath>
+				<pathelement location="."/>
+			</classpath>
+			
+			<arg value="3"/>
+		</java>
+	</target>
+</project>
+
+	

@@ -1,0 +1,25 @@
+Lab 10 Performance
+
+Q1:
+n  (1000)	T(n) (s)	Tn/n	Tn/n^2	Tn/n*logn
+10	2.38	0.238	0.0238	0.071645139
+20	5.152	0.2576	0.01288	0.059603028
+30	8.068	0.268933333	0.008964444	0.054807281
+40	11.6	0.29	0.00725	0.054491529
+50	14.144	0.28288	0.0056576	0.050121759
+60	17.148	0.2858	0.004763333	0.04838417
+
+Conclusion: According to the chart T(n) is bound in between f(n)=n and
+f(n)=n^2. And when f(n)=n*logn the graph is close to constante value 0.5
+				
+Q2:
+n  (1000)	T(n) (s)	Tn/n	Tn/n^2	Tn/n*logn
+10	0.96	0.096	0.0096	0.02889888
+20	2.02	0.101	0.00505	0.0233692
+30	3.31	0.110333333	0.003677778	0.022485387
+40	3.89	0.09725	0.00243125	0.018273452
+50	5.35	0.107	0.00214	0.018958669
+60	6.89	0.114833333	0.001913889	0.019440572
+
+Conclusion: Accourding  to the chart, f(n)=n is lower bound and f(n)=n^2 is
+upper bound. Test with f(n)=n*logn the value is close to constant 0.018

@@ -1,0 +1,32 @@
+#!/bin/bash
+#CS 265 Assignment 1, Problem 3
+#Author: Yongchang Cai
+#Date: 10/17/2016
+#Description: Determine the number of directories containing problems.
+
+# ARCHIVE="/home/yc552/CS265/assignment1/testArchive" #the test ARCHIVE
+
+if [ $# -lt 3 ]; then # Check for the arguments
+	echo "$0: not enough arguments"
+	echo "The arugments should be:prob3 2003 11 27"
+	exit 2
+elif [ $# -gt 3 ]; then
+	echo "$0: too many arguments"
+	echo "The arguments should be:prob3 2003 11 27"
+	exit 2
+fi
+
+input_date="TimeStamp: $2/$3/$1" # Changed the input arugments into the search pattern.
+#echo $input_date  #test for the input
+for i in $ARCHIVE/*; do 
+   for j in $i/*; do
+		if grep -m 1 -q "$input_date" $j; then # In each file search for the pattern date
+			echo ${j##*/} # echo the file name if match.
+		fi
+	done
+done
+
+# The output in the test ARCHIVE is:
+# input: bash prob3 2004 03 08
+# output: prob309264_03 
+# It is the name of the messages that match.

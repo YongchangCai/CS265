@@ -1,0 +1,32 @@
+#!/bin/bash
+#CS 265 Assignment 1, Problem 2
+#Author: Yongchang Cai
+#Date: 10/17/2016
+#Description: Determine how many messages are in the longest thread.
+
+# ARCHIVE="/home/yc552/CS265/assignment1/testArchive" #the test ARCHIVE
+
+for i in $ARCHIVE/*; do
+	for f in $i/*; do
+		file_name=${f##*/} # remove the path of file and get the actual name
+		thread_num=${file_name%_*} #record the threadnum from first part of file name
+		thread_message=${file_name#*_} # record the messagenum from second part of file name
+		echo $thread_num >> temp #record the problem number in the temp file
+	done
+done
+
+sort -g temp | uniq -c | sort -bgr >> 2temp #sorted the temp file and count for the unique value and sort in descending. write in 2temp file. 
+max_num=`awk 'NR==1 {print $1}' 2temp` # get the first value in 2temp which is the messages number for the longest thread.
+while read line; do # find all the thread that with same amout of messages
+	current_num=`awk '{print $1}' <<< $line` 
+	if [ "$current_num" == "$max_num" ]; then #when the messages number is same as the longest number print out the file name
+		echo $line
+	else
+		#echo 'the end of max num'
+		break;
+	fi
+done < 2temp
+#echo $current_num $max_num      #Output test
+rm temp 2temp
+#The output of the test ARCHIVE is:7 prob575375
+#It is a correct output.

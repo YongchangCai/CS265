@@ -1,0 +1,7 @@
+It is a program for CS265 assignment3. 
+In the build.xml it will build and run the program. 
+It will require assignment3.java, Operand.java, opType.java, Token.java
+files in order to run the file.
+
+All the credits of this program is belongs to Yongchang Cai
+yc552@drexel.edu

@@ -1,0 +1,24 @@
+CS265 Lab 9 
+Debugging
+By Yongchang Cai
+
+Q1: A file called core has been created 
+
+Q2: In a inTable() function that called by main() function 
+
+Q3: 
+a. In main function, the scanf require a pointer int so need to change n to
+&n
+b. In main function, the scanf for pi it should be %f for a floating point
+and for n it should be %d as a int.
+c. strcmp() was wrong in inTable() function becasue in st array the st[0] is
+null so the for loop should be start with 1 or let the number++ after it
+assign value to st
+d. In main function, the scanf need a pointer of int so it should be change
+to &n
+e. assert((last>=0) && (last<n)) is wrong that last is not in the range.
+
+Q4. Since it is a error with the output value so it would ne be catched by
+compiler.
+
+Q5. The program will crash with a cirtical value of the output.

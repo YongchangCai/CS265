@@ -1,0 +1,82 @@
+CS265 Lab6 Answer Sheet
+Author: Yongchang Cai
+Date:10/28/2016
+
+Design and Implementation
+Q1:
+The add() is add a new prefix to the stat table and updates the prefix.
+The addSuffix() is add a new suffix to the table.
+
+Q2:
+lookup() is to search for a prefix and create a State if possible.
+It has been called in add() and generate()
+
+Q3:
+
+	Prefix				Suffix
+(null) (null)			It's
+(null) It's				  a
+It's    a				new
+ a 	 new 				dawn
+new	 dawn				(null)
+
+Pointers: It's (3); a (3); new (3); dawn (3)
+
+Q4:
+The advantage of is for most of string it would only allocated same amout of
+memory for the pointer in the table. 
+
+Q5:
+It would not return the memory unless to free al the pointers. 
+
+Q6:
+void clean() {
+	State *temp_sp = NULL;
+
+	for (int i = 0; i < NHASH; i++) {
+		for (temp_sp = statetab[i]; temp_sp!= NULL; temp_sp = temp_sp->next) {
+			free(temp_sp);
+		}
+	}
+}
+
+Q7:
+Yes, it would go to each state in the table and free the pointer state.
+Not sure if we need go in to the State and free all the pointer of suffix.
+
+Q8:
+By making sure that each State is clean and be NULL, it would be sure that
+each string has been freed since the string is stored in State
+
+Q9:
+Prefixes are stroed in deque(double ened queue)  as String. It could allow
+people to pop out the first element and add a new element to last element.
+
+Q10:
+A map of Prefix as key and String Vector as value is serving as Hash table.
+
+Q11:
+The lists of suffixes are stored in as Vector of String.
+
+Q12:
+It would be more simple and dont have to manage all the memory.
+
+Q13:
+It would be more analizable and controlable to use C implementation.
+
+Q14:
+The prefix is stored as a turple (w1,w2)
+
+Q15:
+As a dictionary in Python
+
+Q16:
+The suffixes are stored as lists.\
+
+Q17:
+Since all variables in python are objects so it would not require for the
+types of all variables. 
+
+Q18:
+The data structure in C++ are better since it is using dynanmic datatypes
+for different data. 

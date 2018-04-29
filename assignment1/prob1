@@ -1,0 +1,19 @@
+#!/bin/bash
+#CS 265 Assignment 1, Problem 1
+#Author: Yongchang Cai
+#Date: 10/17/2016
+#Description: Determine the number of directories containing problems.
+
+# ARCHIVE="/home/yc552/CS265/assignment1/testArchive/" #the test ARCHIVE
+num_directories=0		#set initial variables to count
+num_messages=0
+for i in $ARCHIVE/*; do
+	((num_directories++))		# count directories number
+	for j in $i/*; do
+		((num_messages++))		# count files number that same as message
+	done
+done
+
+echo $num_directories $num_messages
+# In my small test ARCHIVE it output: 5	1042
+# It means there are 5 directories and 1042 messages. It is correct. 

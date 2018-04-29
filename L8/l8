@@ -1,0 +1,41 @@
+CS265 Lab 8 Interfaces, MakeFiles
+
+1. Interfaces
+Q1.1 
+i)Interface should hide implementation detail, they can be changed without
+affecting clients.
+
+ii)Use non-overlapping functions and cpabilities. So it will have minimum
+set of behaviors that larger interfaces are harder to master and maintain.
+
+iii) It will minimise side effects, document any side effects, decrease
+coupling and explicitly define what external services are needed.
+
+iv) Use consistent naming schemes, define arguments consistently and behave
+similarly to associated interfaces
+
+Q1.2
+It doesn't handle input lines more than 199 and records more than 20 fields.
+Comma inside quotes would not handle properly. Leading quote are not
+removed. It would not reset the variables. Empty fields would not be handle
+correctly
+
+Q1.3
+Reset function sets variables bakc to starting values.
+It will get no limit number of lines and fields. 
+It will accetp different end of line symbles.
+The comma in quotes are handling properly.
+The leading quoter is fixed.
+
+Q1.4
+Empty filed would not be handled correctly. No, it could only solve one file at a time. Because only one instance of the
+required variables exist.
+
+Q1.5
+It allowed to have 2 file solved at same time. Empty fields still would not
+be handle correctly. 
+
+Q1.6
+Yes, since it has hide implementation details from user. And a small
+orthogonal set primitives, it dont reach behind the users back, and it do
+the same thing the same way everywhere. 

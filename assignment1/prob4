@@ -1,0 +1,22 @@
+#!/bin/bash
+#CS 265 Assignment 1, Problem 1
+#Author: Yongchang Cai
+#Date: 10/17/2016
+#Description: Determine the number of directories containing problems.
+
+# ARCHIVE="/home/yc552/CS265/assignment1/testArchive/" #the test ARCHIVE
+
+search_host="^To: *" # create the search pattern
+for i in $ARCHIVE/*; do
+	for j in $i/*; do
+		#find for the search pattern in each file, and write the 3rd item(name) into temp file with out ()
+		grep -m 1 "$search_host" $j | awk '{print $3}' | tr -d '()' >> temp
+	done
+done
+sort temp | uniq -c | sort -brg | awk '{print $2, $1} END {print "total ",
+NR}'
+#sort the file and get the unique value with the occur times and
+#sort in descanding order. print out the name and occur times and the total number of unique name
+rm temp
+# The ouput of the test ARCHIVE is a list with all the unique names and
+# occur numbers. And the total number of unique names in the end. 

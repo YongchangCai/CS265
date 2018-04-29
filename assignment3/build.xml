@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project default="run">
+	<description>
+		Compiles all problems, and run the problems. 
+	</description>
+	
+	<target name="compile" depends='assignment3,Operand,Operator,opType,Token'/>
+
+	
+	<target name="clean">
+		<delete>
+			<fileset dir="./">
+				<include name='*.class'/>
+			</fileset>
+		</delete>
+	</target>
+	
+	<target name="assignment3">
+		<javac srcdir='.' includes='assignment3.java'/>
+		
+	</target>
+	
+	<target name="Operand">
+		<javac srcdir='.' includes='Operand.java'/>
+		
+	</target>
+	
+	<target name="Operator">
+		<javac srcdir='.' includes='Operator.java'/>
+		
+	</target>
+	
+	<target name="opType">
+		<javac srcdir='.' includes='opType.java'/>
+		
+	</target>
+		
+	<target name="Token">
+		<javac srcdir='.' includes='Token.java'/>
+		
+	</target>
+	
+	<target name='run' depends='compile'>
+		<java classname='assignment3'>
+			<classpath>
+				<pathelement location="."/>
+			</classpath>
+		</java>
+   </target>		
+	
+	<target name='doc' depends='run'>
+		<javadoc
+			destdir='docs/'
+		    author='yes'
+		    use='true'
+		    windowtitle='JavaDoc of assignment3' >
+		    <fileset dir='.' defaultexcludes='yes'>
+		    	<include name='assignment3.java'/>
+		    </fileset>
+		</javadoc>
+	</target>
+</project>
+
+	
